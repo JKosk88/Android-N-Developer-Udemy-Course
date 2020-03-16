@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.beastly.eggtimer.MainActivity"
+    android:background="@drawable/eggs">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/seekBar"
+        android:background="@color/colorPrimary"
+        android:alpha="0.5" />
+
+    <ImageButton
+        android:layout_height="50dp"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
+        android:id="@+id/startButton"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="50dp" />
+
+    <Button
+        android:text="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="start"
+        android:layout_below="@+id/seekBar"
+        android:layout_toLeftOf="@+id/startButton"
+        android:layout_toStartOf="@+id/startButton" />
+
+    <TextView
+        android:text="6:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeLeft"
+        android:textColor="@color/colorAccent"
+        android:textSize="100sp"
+        android:background="@android:drawable/checkbox_off_background"
+        android:paddingStart="50sp"
+        android:paddingTop="30sp"
+        android:paddingBottom="30sp"
+        android:paddingEnd="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="67dp" />
+
+</RelativeLayout>
